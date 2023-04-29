@@ -1,16 +1,16 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 import { contactType } from "../types";
 import { v4 as uuidv4 } from "uuid";
 import { useDispatch } from "react-redux";
 import { contactAction } from "../store";
+import { useNavigate } from "react-router-dom";
 
-const Person = () => {
-  const { personId } = useParams();
+const CreateContact = () => {
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
   const [status, setStatus] = useState<boolean>(true);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const formSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,6 +23,7 @@ const Person = () => {
       status,
     };
     dispatch(contactAction.addContact(newContact));
+    navigate("/contact");
   };
 
   return (
@@ -119,4 +120,4 @@ const Person = () => {
   );
 };
 
-export default Person;
+export default CreateContact;

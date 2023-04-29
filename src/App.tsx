@@ -4,7 +4,8 @@ import Base from "./pages/Base";
 import Contact from "./pages/Contact";
 import Charts from "./pages/Charts";
 import Navbar from "./components/Navbar";
-import Person from "./components/Person";
+import CreateContact from "./components/CreateContact";
+import EditContact from "./components/EditContact";
 
 function App() {
   return (
@@ -22,8 +23,8 @@ function App() {
           <Route path="charts" Component={Charts} />
         </Route>
         <Route path="/" Component={Navbar}>
-          <Route path="contact/:personId" Component={Person} />
-          <Route path="contact/create" Component={Person} />
+          <Route path="contact/:personId" Component={EditContact} />
+          <Route path="contact/create" Component={CreateContact} />
         </Route>
       </Routes>
     </Fragment>
