@@ -1,5 +1,5 @@
 const Charts = () => {
-  return <div>Charts</div>;
+  return <div className="flex w-full h-full">Charts</div>;
 };
 
 export default Charts;
