@@ -10,13 +10,13 @@ const Contact = () => {
   console.log(contacts);
 
   return (
-    <div className="flex flex-col w-full h-full items-center pt-7">
-      <div className="flex justify-start ">
+    <div className="flex flex-col h-auto w-full items-center pt-7">
+      <div className="grid justify-start grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 ">
         {contacts.length ? (
           contacts.map((contact) => (
             <div
               key={contact.id}
-              className="flex flex-col h-52 w-60 border-2 border-brick/40 rounded-md items-center justify-center  mx-3"
+              className="flex flex-col h-52 w-60 my-3 border-2 border-brick/40 rounded-md items-center justify-center  mx-3"
             >
               <span className="font-semibold text-darkBrown tracking-wide">
                 {contact.firstName}
