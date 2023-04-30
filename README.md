@@ -2,6 +2,13 @@
 
 - This is just some combinations of differnt libraries and theire functionality.
 
+### How to use is?
+
+- First you can just choose what you want to use contact, charts or maps.
+- Then you can go to the contact section and add some contacts or delete them after creating them.
+- On the charts section it shows the chart of the covid details.
+- And on the map section it will show the covid details of country we click.
+
 ### What have been used?
 
 - Things used here are:
