@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import TotalCases from "../components/TotalCases";
 import LineGraph from "../components/LineGraph";
-import Map from "../components/Map";
 
 const Charts = () => {
   const allDataQuery = useQuery({
