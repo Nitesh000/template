@@ -1,7 +1,9 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import "leaflet/dist/leaflet.css";
 import { useQuery } from "@tanstack/react-query";
 import { MyObjectType2 } from "../types";
+import { Icon } from "leaflet";
 
 const Map = () => {
   const mapQuery = useQuery({
@@ -11,6 +13,12 @@ const Map = () => {
         .then((res) => res.json())
         .catch((e) => console.log(e)),
   });
+
+  const customIcon = new Icon({
+    iconUrl: markerIconPng,
+    iconsSize: [25, 25],
+  });
+
   var data;
 
   if (mapQuery.isSuccess) {
@@ -43,7 +51,7 @@ const Map = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {data?.map((item, i) => (
-          <Marker key={i} position={item.location}>
+          <Marker key={i} position={item.location} icon={customIcon}>
             <Popup className="flex flex-col items-center">
               <div>
                 <img className="h-5 contain inline" src={item.message[0]} />
