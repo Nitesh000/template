@@ -6,6 +6,7 @@ import Charts from "./pages/Charts";
 import Navbar from "./components/Navbar";
 import CreateContact from "./components/CreateContact";
 import EditContact from "./components/EditContact";
+import Map from "./components/Map";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route path="/" Component={Navbar}>
           <Route path="charts" Component={Charts} />
+        </Route>
+        <Route path="/" Component={Navbar}>
+          <Route path="maps" Component={Map} />
         </Route>
         <Route path="/" Component={Navbar}>
           <Route path="contact/:personId" Component={EditContact} />

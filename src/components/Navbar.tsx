@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { AiFillContacts, AiFillPieChart, AiOutlineMenu } from "react-icons/ai";
+import { FaMapMarkedAlt } from "react-icons/fa";
 import NavbarElement from "./NavbarElement";
 
 export type SidebarInfoTypes = {
@@ -15,9 +16,14 @@ const sidebarInfo: SidebarInfoTypes[] = [
     icon: <AiFillContacts />,
   },
   {
-    name: "Charts & Maps",
+    name: "Charts",
     path: "charts",
     icon: <AiFillPieChart />,
+  },
+  {
+    name: "Maps",
+    path: "maps",
+    icon: <FaMapMarkedAlt />,
   },
 ];
 

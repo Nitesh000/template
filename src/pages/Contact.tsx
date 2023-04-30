@@ -7,7 +7,6 @@ const Contact = () => {
   const contacts = useSelector((state: StoreState) => state.contact);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  console.log(contacts);
 
   return (
     <div className="flex flex-col h-auto w-full items-center pt-7">
@@ -51,7 +50,7 @@ const Contact = () => {
             </div>
           ))
         ) : (
-          <span className="text-2xl text-brick font-bold ">
+          <span className="text-2xl text-brick font-bold col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 xl:col-span-5">
             No Contacts please add one
           </span>
         )}

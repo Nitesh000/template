@@ -6,7 +6,8 @@ const Base = () => {
       {/* go to contact page */}
       {/* go to charts and maps page */}
       <Button label="Contact" goTo="contact" />
-      <Button label="Charts & Maps" goTo="charts" />
+      <Button label="Charts" goTo="charts" />
+      <Button label="Maps" goTo="maps" />
     </div>
   );
 };
